@@ -1,116 +1,64 @@
 ## Description（DOL框架描述） ##
 
-**Distributed Operation Layer (DOL)** 是一个为并行应用编程的软件开发框架。DOL允许指定基于Kahn进程网络计算模型的应用，描述了一个基于SystemC的仿真引擎。此外，DOL提供了基于XML规范的格式，来描述一个多处理器系统上的并行应用程序的实现，包括结合和映射。
+**Distributed Operation Layer (DOL)** 是一个为并行应用编程的软件开发框架。DOL允许指定基于Kahn进程网络计算模型的应用，描述了一个基于SystemC的仿真引擎。此外，DOL提供了基于XML规范的格式，来描述一个多处理器系统上的并行应用程序的实现，包括结合和映射。
 
 DOL基本上由三个部分组成：
 
-- DOL 应用程序接口
-
-- DOL 功能仿真
-
-- DOL 映射优化
+- DOL 应用程序接口
+- DOL 功能仿真
+- DOL 映射优化
 
 ## How to install ##
 
-1. **使用 VMware 虚拟机安装 Ubuntu 系统**
-
-2. **安装一些必要的环境**  
-
-$ sudo apt-get update  
-
-$ sudo apt-get install ant  
-
-$ sudo apt-get install openjdk-7-jdk  
-
+1. **使用 VMware 虚拟机安装 Ubuntu 系统**
+2. **安装一些必要的环境**  
+$ sudo apt-get update  
+$ sudo apt-get install ant  
+$ sudo apt-get install openjdk-7-jdk  
 $ sudo apt-get install unzip
-
-3. **下载文件**  
-
-sudo wget http://www.accellera.org/images/downloads/standards/systemc/systemc-2.3.1.tgz  
-
+3. **下载文件**  
+sudo wget http://www.accellera.org/images/downloads/standards/systemc/systemc-2.3.1.tgz  
 sudo wget http://www.tik.ee.ethz.ch/~shapes/downloads/dol_ethz.zip
-
-4. **解压文件**   
-
-新建 dol 的文件夹：  
-
-$ mkdir dol  
-
-将 dol\_ethz.zip 解压到 dol 文件夹中：  
-
-$ unzip dol_ethz.zip -d dol  
-
-解压 systemc：  
-
+4. **解压文件**   
+新建 dol 的文件夹：  
+$ mkdir dol  
+将 dol\_ethz.zip 解压到 dol 文件夹中：  
+$ unzip dol_ethz.zip -d dol  
+解压 systemc：  
 $ tar -zxvf systemc-2.3.1.tgz
-
-5. **编译 systemc**  
-
-解压后进入 systemc-2.3.1 的目录下：  
-
-$ cd systemc-2.3.1  
-
-新建一个临时文件夹 obidir：  
-
-$ mkdir obidir  
-
-进入该文件夹 obidir：  
-
-$ cd obidir  
-
-运行 configure（能根据系统的环境设置一下参数，用于编译）：  
-
-$ ../configure CXX=g++ --disable-async-updates  
-
-编译：  
-
-$ sudo make install  
-
-编译完后文件目录如下：  
-
-$ cd ..  
-
-$ ls  
-
-![photo1](http://p1.bqimg.com/4851/ab3741586ed32d23.png)  
-
-
-记录当前的工作路径：  
-
-$ pwd  
-
-![photo2](http://p1.bqimg.com/4851/50dd278f113d6828.png)  
-
-6. **编译 dol**  
-
-进入刚刚 dol 的文件夹：  
-
-$ cd ../dol  
-
-用刚刚 pwd 的结果修改 build_zip.xml 文件：  
-
-![photo3](http://p1.bqimg.com/4851/6e58c430a2f87650.png)  
-
-编译：  
-
-$ ant -f build\_zip.xml all  
-
-若成功会显示 build successful  
-
-7. **完成安装，尝试运行第一个例子**  
-
-进入 build/bin/main 路径下：  
-
-$ cd build/bin/main  
-
-运行第一个例子：  
-
-$ ant-f runexample.xml -Dnumber=1  
-
-成功结果如图  
-
-![photo4](http://p1.bqimg.com/4851/7a92cf22e1e3a70a.png)  
-
+5. **编译 systemc**  
+解压后进入 systemc-2.3.1 的目录下：  
+$ cd systemc-2.3.1  
+新建一个临时文件夹 obidir：  
+$ mkdir obidir  
+进入该文件夹 obidir：  
+$ cd obidir  
+运行 configure（能根据系统的环境设置一下参数，用于编译）：  
+$ ../configure CXX=g++ --disable-async-updates  
+编译：  
+$ sudo make install  
+编译完后文件目录如下：  
+$ cd ..  
+$ ls  
+![photo1](http://p1.bqimg.com/4851/ab3741586ed32d23.png)  
+记录当前的工作路径：  
+$ pwd  
+![photo2](http://p1.bqimg.com/4851/50dd278f113d6828.png)  
+6. **编译 dol**  
+进入刚刚 dol 的文件夹：  
+$ cd ../dol  
+用刚刚 pwd 的结果修改 build_zip.xml 文件：  
+![photo3](http://p1.bqimg.com/4851/6e58c430a2f87650.png)  
+编译：  
+$ ant -f build\_zip.xml all  
+若成功会显示 build successful  
+7. **完成安装，尝试运行第一个例子**  
+进入 build/bin/main 路径下：  
+$ cd build/bin/main  
+运行第一个例子：  
+$ ant-f runexample.xml -Dnumber=1  
+成功结果如图：  
+![photo4](http://p1.bqimg.com/4851/7a92cf22e1e3a70a.png)
 
 ## Experimental experience ##
 
