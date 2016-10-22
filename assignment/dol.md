@@ -24,7 +24,7 @@ consumer输出结果
 
 1. 如何修改  
 在example1的square.c中修改square_fire信号处理函数：  
-![photo4](http://p1.bqimg.com/4851/750e919544fa5cce.png)
+![photo4](http://p1.bpimg.com/4851/a15bfdd84c3660fe.png)
   
   在当前位置小于设定长度时，将运算i=i\*i改为i=i\*i*i，即可在square模块中进行3次方运算。
 
