@@ -40,15 +40,15 @@ $ sudo make install
 编译完后文件目录如下：  
 $ cd ..  
 $ ls  
-![photo1](http://p1.bqimg.com/4851/ab3741586ed32d23.png)  
+![photo1](http://a2.qpic.cn/psb?/V10tjyIS2Dudkp/Zl*QD6cz31Sq2S9u7Mkjg5D0HtOT1BmulPB.wa3L6jY!/b/dI0BAAAAAAAA&bo=YgJbAGICWwADACU!&rf=viewer_4)  
 记录当前的工作路径：  
 $ pwd  
-![photo2](http://p1.bqimg.com/4851/50dd278f113d6828.png)  
+![photo2](http://a2.qpic.cn/psb?/V10tjyIS2Dudkp/nFnRyzaAd99bX8wrv1loja7ZGXPc73FOaH1rC9oDCJQ!/b/dAkBAAAAAAAA&bo=VQEmAFUBJgADACU!&rf=viewer_4)  
 6. **编译 dol**  
 进入刚刚 dol 的文件夹：  
 $ cd ../dol  
 用刚刚 pwd 的结果修改 build_zip.xml 文件：  
-![photo3](http://p1.bqimg.com/4851/6e58c430a2f87650.png)  
+![photo3](http://a3.qpic.cn/psb?/V10tjyIS2Dudkp/gjLcdgXFIOsbusSj*GThm9LYlLqqOOolMBgrQttsKDc!/b/dHwBAAAAAAAA&bo=0AI3ANACNwADACU!&rf=viewer_4)  
 编译：  
 $ ant -f build\_zip.xml all  
 若成功会显示 build successful  
@@ -58,7 +58,7 @@ $ cd build/bin/main
 运行第一个例子：  
 $ ant-f runexample.xml -Dnumber=1  
 成功结果如图：  
-![photo4](http://p1.bqimg.com/4851/7a92cf22e1e3a70a.png)
+![photo4](http://a3.qpic.cn/psb?/V10tjyIS2Dudkp/LXxT5asliTjf6AamnZ6lN7L5.LJcWCabAobLcpXUl7M!/b/dAoBAAAAAAAA&bo=bQGzAW0BswEDACU!&rf=viewer_4)
 
 ## Experimental experience ##
 
