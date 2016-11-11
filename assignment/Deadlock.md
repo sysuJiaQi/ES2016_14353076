@@ -1,6 +1,6 @@
 ### 一、死锁停在第几次的截图 ###
 
-![photo1](http://p1.bpimg.com/4851/695a950b941acdf2.png)
+![photo1](http://a2.qpic.cn/psb?/V10tjyIS2Dudkp/68J.2EuNUxdk6oPuCn0toPYbcw1slKh9Ilq5MsTPaSY!/b/dAkBAAAAAAAA&bo=OgFkAToBZAEDACU!&rf=viewer_4)
   
 如图所示，在程序运行第203次时发生死锁。
 
@@ -15,7 +15,7 @@
 
 类Deadlock继承了Runnable，它是一个线程，会在后台默默地运行，每次调度到它执行的时候，它就运行run()中的语句。而java程序从main函数开始执行，时间轴如下图所示：
 
-![photo2](http://p1.bpimg.com/4851/78be4d1b0ddadce4.png)
+![photo2](http://a1.qpic.cn/psb?/V10tjyIS2Dudkp/CUj3iHVKH3lwuKOnyPl91V9Rn4LgS2.yd4MEg96UpoM!/b/dHEBAAAAAAAA&bo=gQGQAYEBkAEDACU!&rf=viewer_4)
 
 类A中的两个方法methodA(B b)和last()都使用了关键字synchronized，当一个线程访问类对象的一个函数时，其他线程对同一个对象的其他函数的访问也将被阻塞，类B也同理。这满足了资源互斥条件，若a为类A的一个对象，b为类B的一个对象，那么资源a或b每次只能被一个线程使用。
 
